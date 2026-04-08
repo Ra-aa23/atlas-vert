@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atlas Vert — Tourisme Nature & Montagne au Maroc</title>
-  <meta name="description" content="Atlas Vert — Rafting, randonnée, camping, VTT et quad dans les montagnes de l'Atlas marocain à 1868m. Réservez votre aventure authentique au Maroc.">
+  <meta name="description" content="Atlas Vert — Rafting, randonnée, camping, VTT et quad dans les montagnes de l'Atlas marocain à 1868m.">
   <meta property="og:title" content="Atlas Vert — Tourisme Nature & Montagne au Maroc">
-  <meta property="og:description" content="Rafting, randonnée, camping, VTT et quad dans les montagnes de l'Atlas marocain.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo">
@@ -27,16 +25,14 @@
         </div>
         <div class="logo-name">Atlas <span>Vert</span></div>
       </a>
-
       <nav id="main-nav">
         <ul>
           <li><a href="index.html" id="nav-home" class="active">Accueil</a></li>
           <li><a href="#activities" id="nav-activities">Activités</a></li>
-          <li><a href="pages/booking.html" id="nav-booking" class="btn-book-nav">Réservation</a></li>
-          <li><a href="pages/contact.html" id="nav-contact">Contact</a></li>
+          <li><a href="booking.html" id="nav-booking" class="btn-book-nav">Réservation</a></li>
+          <li><a href="#contact" id="nav-contact">Contact</a></li>
         </ul>
       </nav>
-
       <div style="display:flex;align-items:center;gap:12px;">
         <div class="lang-btns">
           <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')">FR</button>
@@ -48,7 +44,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <svg class="hero-mountains" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <polygon points="0,100 150,30 300,70 480,10 660,55 840,15 1020,50 1200,20 1200,100" fill="white"/>
@@ -58,23 +53,21 @@
       <h1 id="hero-title">Explorez l'Atlas,<br><em>Vivez l'Essentiel</em></h1>
       <p id="hero-sub">Randonnées, rafting, camping sous les étoiles — des aventures authentiques au cœur des montagnes marocaines à 1 868 m d'altitude.</p>
       <div class="hero-btns">
-        <a href="pages/booking.html" class="btn-primary" id="hero-btn1">Réserver une activité</a>
+        <a href="booking.html" class="btn-primary" id="hero-btn1">Réserver une activité</a>
         <a href="#activities" class="btn-outline" id="hero-btn2">Découvrir</a>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL STRIP -->
   <div class="social-strip">
-    <a href="https://www.facebook.com/" target="_blank" class="social-circle fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/" target="_blank" class="social-circle ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/" target="_blank" class="social-circle tt" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://wa.me/212667772551" target="_blank" class="social-circle wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:contact@atlas-vert.com" class="social-circle em" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://youtube.com/" target="_blank" class="social-circle yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com/" target="_blank" class="social-circle fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/" target="_blank" class="social-circle ig"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/" target="_blank" class="social-circle tt"><i class="fab fa-tiktok"></i></a>
+    <a href="https://wa.me/212667772551" target="_blank" class="social-circle wa"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:contact@atlas-vert.com" class="social-circle em"><i class="fas fa-envelope"></i></a>
+    <a href="https://youtube.com/" target="_blank" class="social-circle yt"><i class="fab fa-youtube"></i></a>
   </div>
 
-  <!-- STATS -->
   <div class="stats-section">
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-number">1 868m</div><div class="stat-label" id="stat-s1">Altitude</div></div>
@@ -84,7 +77,6 @@
     </div>
   </div>
 
-  <!-- ACTIVITIES -->
   <section class="section" id="activities">
     <div class="container">
       <div class="section-header">
@@ -95,7 +87,6 @@
     </div>
   </section>
 
-  <!-- WHY US -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-header">
@@ -106,7 +97,6 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -117,8 +107,7 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
+  <section class="cta-section" id="contact">
     <div class="container">
       <h2 id="cta-title">Prêt pour votre prochaine aventure ?</h2>
       <p id="cta-sub">Réservez maintenant et découvrez la magie des montagnes de l'Atlas marocain</p>
@@ -126,12 +115,11 @@
         <a href="https://wa.me/212667772551" target="_blank" class="btn-wa-large" id="cta-wa">
           <i class="fab fa-whatsapp"></i> Réserver via WhatsApp
         </a>
-        <a href="pages/booking.html" class="btn-primary" id="cta-book">Réservation en ligne</a>
+        <a href="booking.html" class="btn-primary" id="cta-book">Réservation en ligne</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
@@ -145,9 +133,9 @@
         </div>
         <p id="footer-desc">Découvrez la magie des montagnes de l'Atlas à travers des aventures authentiques à 1 868m d'altitude au Maroc.</p>
         <div class="footer-social">
-          <a href="#" class="footer-soc sc-fb" style="background:#1877f2"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="footer-soc sc-ig" style="background:#c13584"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="footer-soc sc-tt" style="background:#010101"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="footer-soc" style="background:#1877f2"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-soc" style="background:#c13584"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-soc" style="background:#010101"><i class="fab fa-tiktok"></i></a>
           <a href="https://wa.me/212667772551" class="footer-soc" style="background:#25d366"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -179,22 +167,14 @@
     </div>
   </footer>
 
-  <!-- FLOATING BUTTONS -->
   <div class="floating-btns">
-    <a href="https://wa.me/212667772551" class="float-btn float-wa" target="_blank" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="pages/booking.html" class="float-btn float-book" aria-label="Réserver">
-      <i class="fas fa-calendar-check"></i>
-    </a>
+    <a href="https://wa.me/212667772551" class="float-btn float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="booking.html" class="float-btn float-book"><i class="fas fa-calendar-check"></i></a>
   </div>
 
-  <!-- BACK TO TOP -->
   <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
-    style="display:none;position:fixed;bottom:24px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--dg);color:#fff;border:none;cursor:pointer;font-size:18px;align-items:center;justify-content:center;z-index:999;">
-    ↑
-  </button>
+    style="display:none;position:fixed;bottom:24px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--dg);color:#fff;border:none;cursor:pointer;font-size:18px;align-items:center;justify-content:center;z-index:999;">↑</button>
 
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
