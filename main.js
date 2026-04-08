@@ -57,7 +57,7 @@ const TRANSLATIONS = {
       copy: '© 2026 Atlas Vert — المغرب. Tous droits réservés.',
       linkItems: ['Accueil', 'Rafting', 'Camping', 'Randonnée', 'VTT', 'Quad'],
       infoItems: ['Réservation', 'Contact', 'Blog', 'Guide'],
-      phone: '+212 667-772551',
+      phone: '+212 635-491573',
       location: 'Maroc'
     },
     booking: {
@@ -207,7 +207,7 @@ const TRANSLATIONS = {
       copy: '© 2026 Atlas Vert — المغرب. جميع الحقوق محفوظة.',
       linkItems: ['الرئيسية', 'الرافتينج', 'التخييم', 'المشي الجبلي', 'الدراجة', 'الكواد'],
       infoItems: ['الحجز', 'اتصل بنا', 'المدونة', 'الدليل'],
-      phone: '+212 667-772551',
+      phone: '+212 635 491573',
       location: 'المغرب'
     },
     booking: {
