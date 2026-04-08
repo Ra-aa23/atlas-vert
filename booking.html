@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation — Atlas Vert</title>
+  <meta name="description" content="Réservez votre aventure Atlas Vert — Rafting, randonnée, camping, VTT, quad au Maroc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2C10 2 3 8 3 13C3 16.3 6.1 18.5 10 18.5C13.9 18.5 17 16.3 17 13C17 8 10 2 10 2Z" fill="#4a9a5a"/>
+            <line x1="10" y1="18.5" x2="10" y2="9" stroke="#2a6a3a" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="logo-name">Atlas <span>Vert</span></div>
+      </a>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../index.html" id="nav-home">Accueil</a></li>
+          <li><a href="../index.html#activities" id="nav-activities">Activités</a></li>
+          <li><a href="booking.html" id="nav-booking" class="btn-book-nav active">Réservation</a></li>
+          <li><a href="contact.html" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="lang-btns">
+          <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">AR</button>
+        </div>
+        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BOOKING PAGE -->
+  <main class="booking-page">
+
+    <div class="booking-hero">
+      <h1 id="bk-title">Réserver votre Aventure</h1>
+      <p id="bk-sub">Remplissez le formulaire — nous vous confirmons sous 24h</p>
+    </div>
+
+    <!-- ACTIVITY SELECTION -->
+    <div class="form-card">
+      <h3 id="bk-act-label">Choisissez votre activité</h3>
+      <div class="act-pills" id="bk-pills"></div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label id="lbl-name">Nom complet</label>
+          <input type="text" id="inp-name" placeholder="Votre nom complet">
+        </div>
+        <div class="form-group">
+          <label id="lbl-phone">Téléphone / WhatsApp</label>
+          <input type="tel" id="inp-phone" placeholder="+212...">
+        </div>
+        <div class="form-group">
+          <label id="lbl-date">Date souhaitée</label>
+          <input type="date" id="inp-date">
+        </div>
+        <div class="form-group">
+          <label id="lbl-persons">Nombre de personnes</label>
+          <select id="inp-persons" onchange="updatePriceDisplay()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label id="lbl-msg">Message (optionnel)</label>
+          <textarea id="inp-msg" placeholder="Questions ou demandes spéciales..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICE SUMMARY -->
+    <div class="price-box">
+      <div class="price-row">
+        <span id="lbl-activity">Activité</span>
+        <span id="ps-act-name">Rafting</span>
+      </div>
+      <div class="price-row">
+        <span id="lbl-persons2">Personnes</span>
+        <span id="ps-persons">4</span>
+      </div>
+      <div class="price-total">
+        <span id="lbl-total">Total estimé</span>
+        <span class="total-amount" id="ps-total">1 600 DH</span>
+      </div>
+    </div>
+
+    <!-- SUBMIT BUTTONS -->
+    <button class="btn-submit" id="btn-submit" onclick="submitBooking()">Confirmer la réservation</button>
+    <button class="btn-wa-submit" id="btn-wa-submit" onclick="bookViaWA()">
+      <i class="fab fa-whatsapp"></i> Réserver via WhatsApp
+    </button>
+
+    <!-- SUCCESS BOX -->
+    <div class="success-box" id="success-box">
+      <h3 id="success-title">Réservation envoyée !</h3>
+      <p id="success-msg">Nous vous contactons dans les 24 heures. Merci de votre confiance — Atlas Vert 🌿</p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER SIMPLE -->
+  <footer style="background:var(--dg);padding:20px;text-align:center;">
+    <p style="color:rgba(255,255,255,0.5);font-size:13px;" id="footer-copy">© 2026 Atlas Vert — المغرب</p>
+  </footer>
+
+  <!-- FLOATING WA -->
+  <div class="floating-btns">
+    <a href="https://wa.me/212667772551" class="float-btn float-wa" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
