@@ -132,7 +132,7 @@ const TRANSLATIONS = {
       copy: '© 2026 Atlas Vert — Morocco. All rights reserved.',
       linkItems: ['Home', 'Rafting', 'Camping', 'Hiking', 'MTB', 'Quad'],
       infoItems: ['Booking', 'Contact', 'Blog', 'Guide'],
-      phone: '+212 667-772551',
+      phone: '+212 635-491573',
       location: 'Morocco'
     },
     booking: {
