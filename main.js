@@ -233,7 +233,7 @@ const TRANSLATIONS = {
 let currentLang = 'fr';
 let selectedActivity = { name: 'Rafting', price: 400 };
 const PRICES = [400, 60, 300, 150, 250, 400];
-const WA_NUMBER = '212667772551';
+const WA_NUMBER = '212635491573';
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
